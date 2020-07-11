@@ -1,0 +1,714 @@
+<html>
+    <head>
+        <title>BIG BASKET</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <style>
+    .side-bar{
+   width: 20%;
+   height: 95%;
+   font-size:15px;
+   float: left;
+   background-color:lightgray;
+   z-index: 2;
+   text-decoration:none;
+   
+}
+.side-bar ul{
+   margin-left:10px;
+   
+}
+
+.side-bar ul li{
+   list-style-type:none;
+   font-weight:bold;
+   margin-top:10px;
+   cursor:pointer;
+   
+}
+
+.side-bar ul li:hover{
+   color:black;
+}
+.side-bar ul li ul{
+   display:none;
+   z-index:10;
+   top:77px;
+   
+}
+.side-bar ul li:hover ul{
+   display:block;
+   height:400px;
+   margin-left:14%;
+   padding:0 100px 100px 10px;
+   position:fixed;
+   box-shadow:1px 1px 4px 1px rgpa(0,0,0,0.4);
+   background-color:lightgray;
+}
+
+
+
+
+.fa-angle-right{
+   margin-top:4px;
+   margin-right:8px;
+   float:right;
+   
+}
+
+.slider{
+   width:80%;
+   margin-left:20%;
+   padding:1 10px; 
+   
+}
+.carousel{
+   box-shadow:1px 1px 4px 1px rgba(0,0,0,0.5)
+}
+.carousel-indicators{
+   z-index:2 !important;
+}
+.extra-header{
+       width: 100%;
+       height: auto;
+       margin: 50px 0;
+       text-align: center;
+   }
+   .extra-div{
+       background: white;
+       border: medium none;
+       padding: 10px !important;
+       border-radius: 3px;
+       transition: 0.3s;
+   }
+   
+   .extra-div:hover{
+       box-shadow: 0 0 20px 0 rgba(0 ,0, 0,0.3 );
+       transform: translateY(-20px);
+   }
+
+
+
+</style>
+
+    </head>
+    <body>
+       <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light font-weight-bold">
+        
+            <a class="navbar-brand" href="#">Online Shop</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">HOME <span class="sr-only">(current)</span></a>
+                </li>
+  
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    SHOP BY CATEGORY
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Fruit & Vegetable</a>
+                    <a class="dropdown-item" href="#">Foodgrains oil & Masala</a>
+                    <a class="dropdown-item" href="#">Bakery cake & dairy</a>
+                    <a class="dropdown-item" href="#">Beverages</a>
+                    <a class="dropdown-item" href="#">Snacks & branded food</a>
+                    <a class="dropdown-item" href="#">Beauty & hygiene</a>
+                    <a class="dropdown-item" href="#">Cleaning & household</a>
+                    <a class="dropdown-item" href="#">Kitchen , Garden & pets</a>
+                    <a class="dropdown-item" href="#">Eggs ,Meat & Fish</a>
+                    <a class="dropdown-item" href="#">Gourmet & World Food</a>
+                    <a class="dropdown-item" href="#">Babycare </a>
+                    <a class="dropdown-item" href="#">View all</a>
+             
+                  </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"> Login</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#">Signup</a>
+                    </li>
+    
+              </ul>
+              <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+              </form>
+            </div>
+        
+          </nav>
+       
+          <section class="header">
+            <div class="side-bar" id="side-bar">
+            <ul>
+            <li><a href="#">Category</a><i class="fa fa-angle-right" aria-hidden="true"></i>
+                <ul>
+                    <li>Fruit & Vegetable</li>
+                    <li>Bakery cake & dairy</li>
+                    <li>Beverages</li>
+                    <li>Beauty & hygiene</li>
+                    <li>Cleaning & household</li>
+                    <li>Snacks & branded food</li>
+                </ul>
+            </li>
+            
+            <li><a href="#">Brand</a><i class="fa fa-angle-right" aria-hidden="true"></i>
+                <ul>
+                    <li>Amul</li>
+                    <li>Amul Gold</li>
+                    <li>Amul Taaza</li>
+                    <li>britania</li>
+                    <li>Cadbury</li>
+                    <li>CloseUp</li>
+                    <li>Dettol</li>
+                </ul>
+            </li>
+            
+            <li><a href="#">Price</a><i class="fa fa-angle-right" aria-hidden="true"></i>
+                <ul>
+                    <li>Less than Rs 20 </li>
+                    <li>Rs 21 to Rs 50</li>
+                    <li>Rs 51 to Rs 100</li>
+                    <li>Rs 101 to Rs 200</li>
+                    <li>Rs 201 to Rs 500</li>
+                    <li>More than Rs 501</li>
+                </ul>
+            </li>
+            
+            <li><a href="#">DisCount</a><i class="fa fa-angle-right" aria-hidden="true"></i>
+                <ul>
+                    <li>5%-10%</li>
+                    <li>10%-15%</li>
+                    <li>15%-20%</li>
+            
+                </ul>
+            </li>
+            <li><a href="#">PackSize</a><i class="fa fa-angle-right" aria-hidden="true"></i>
+                <ul>
+                    <li>25g</li>
+                    <li>50g</li>
+                    <li>100g</li>
+                    <li>150g</li>
+                    <li>250g</li>
+                    <li>500g</li>
+                    <li>700g</li>
+                    <li>750g</li>
+                    <li>1 kg</li>
+                    <li>5 kg</li>
+                    <li>10 kg</li>
+                </ul>
+            </li>
+            <li><a href="#">FoodPreference</a><i class="fa fa-angle-right" aria-hidden="true"></i>
+                <ul>
+                    <li>vegetariun</li>
+                    <li>Non-vegetariun</li>
+
+                </ul>
+            </li>
+            </ul>
+            </div>
+        
+        </section>
+            <div class="slider">
+                <div id="slider" class="carousel slide carousel-fade" data-ride="carousel">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="horlicks.jpg" class="d-block w-100" width="500px" height="680px">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="bb.jpg" class="d-block w-100" width="500px" height="680px">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="cc.jpg" class="d-block w-100" width="500px" height="680px">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="dd.jpg" class="d-block w-100" width="500px" height="680px">
+                    </div>
+                  </div>
+                  <ol class="carousel-indicators">
+                    <li data-target="#slider" data-slide-to="0" class="active"></li>
+                    <li data-target="#slider" data-slide-to="1"></li>
+                    <li data-target="#slider" data-slide-to="2"></li>
+                    <li data-target="#slider" data-slide-to="3"></li>
+                    
+                  </ol>
+                  
+                </div>
+                
+                
+                </div>
+            
+
+                <section class="extra-header p-5 text-center ">
+                    <h1>DAILY ASSANTIAL</h1>
+               <div class="row">
+                   <div class="col-md-3 extra-div">
+                    <div class="card text-center">
+                        <div class="card-header"><img src="whitetone face powder.jpg" ></div>
+                        <div class="card-body">whitetone face powder<br>
+                            Quantity:&nbsp;<select>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                            </select>
+                        </div>
+                        <div class="card-footer">MRP: Rs. 200
+                            <a href="add" class="btn btn-warning">add to cart</a>
+                        </div>
+                      </div>
+                      
+                   </div>
+
+
+                   <div class="col-md-3 extra-div">
+                    <div class="card item-align-center">
+                        <div class="card-header"><img src="horlicks.jpg" ></div>
+                        <div class="card-body">horlicks<br>
+                            Quantity:&nbsp;<select>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                            </select>
+                        </div>
+                        <div class="card-footer">MRP: Rs. 200
+                            <a href="add" class="btn btn-warning">add to cart</a>
+                        </div>
+                      </div>
+                      
+                   </div>
+
+                   <div class="col-md-3 extra-div">
+                    <div class="card item-align-center">
+                        <div class="card-header"><img src="almondrops hair oil.jpg" ></div>
+                        <div class="card-body">almondrops hair oil<br>
+                            Quantity:&nbsp;<select>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                            </select>
+                        </div>
+                        <div class="card-footer">MRP: Rs. 100
+                            <a href="add" class="btn btn-warning">add to cart</a>
+                        </div>
+                      </div>
+                      
+                   </div>
+
+                   <div class="col-md-3 extra-div">
+                    <div class="card item-align-center">
+                        <div class="card-header"><img src="axe signature.jpg" ></div>
+                        <div class="card-body">axe signature<br>
+                            Quantity:&nbsp;<select>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                            </select>
+                        </div>
+                        <div class="card-footer">MRP: Rs. 300
+                            <a href="add" class="btn btn-warning">add to cart</a>
+                        </div>
+                      </div>
+                      
+                   </div>
+
+               </div>
+            </section> 
+
+
+            <section class="extra-header p-5 text-center">
+                <div class="row">
+                    <div class="col-md-3 extra-div">
+                     <div class="card item-align-center">
+                         <div class="card-header"><img src="banphool thanda oil.jpg" ></div>
+                         <div class="card-body">banphool thanda oil<br>
+                             Quantity:&nbsp;<select>
+                                 <option>1</option>
+                                 <option>2</option>
+                                 <option>3</option>
+                             </select>
+                         </div>
+                         <div class="card-footer">MRP: Rs. 250
+                             <a href="add" class="btn btn-warning">add to cart</a>
+                         </div>
+                       </div>
+                       
+                    </div>
+ 
+ 
+                    <div class="col-md-3 extra-div">
+                     <div class="card item-align-center">
+                         <div class="card-header"><img src="boost jarboof.jpg" ></div>
+                         <div class="card-body">boost jarboof<br>
+                             Quantity:&nbsp;<select>
+                                 <option>1</option>
+                                 <option>2</option>
+                                 <option>3</option>
+                             </select>
+                         </div>
+                         <div class="card-footer">MRP: Rs. 110
+                             <a href="add" class="btn btn-warning">add to cart</a>
+                         </div>
+                       </div>
+                       
+                    </div>
+ 
+                    <div class="col-md-3 extra-div">
+                     <div class="card item-align-center">
+                         <div class="card-header"><img src="boroline antiseptic creem.jpg" ></div>
+                         <div class="card-body">boroline antiseptic creem<br>
+                             Quantity:&nbsp;<select>
+                                 <option>1</option>
+                                 <option>2</option>
+                                 <option>3</option>
+                             </select>
+                         </div>
+                         <div class="card-footer">MRP: Rs. 50
+                             <a href="add" class="btn btn-warning">add to cart</a>
+                         </div>
+                       </div>
+                       
+                    </div>
+ 
+                    <div class="col-md-3 extra-div">
+                     <div class="card item-align-center">
+                         <div class="card-header"><img src="boroplus antiseptic creem.jpg" ></div>
+                         <div class="card-body">boroplus antiseptic creem<br>
+                             Quantity:&nbsp;<select>
+                                 <option>1</option>
+                                 <option>2</option>
+                                 <option>3</option>
+                             </select>
+                         </div>
+                         <div class="card-footer">MRP: Rs. 60
+                             <a href="add" class="btn btn-warning">add to cart</a>
+                         </div>
+                       </div>
+                       
+                    </div>
+ 
+                </div>
+             </section> 
+
+
+
+             <section class="extra-header p-5 text-center">
+                <div class="row">
+                    <div class="col-md-3 extra-div">
+                     <div class="card item-align-center">
+                         <div class="card-header"><img src="clinic plus shampoo.jpg" ></div>
+                         <div class="card-body">clinic plus shampoo<br>
+                             Quantity:&nbsp;<select>
+                                 <option>1</option>
+                                 <option>2</option>
+                                 <option>3</option>
+                             </select>
+                         </div>
+                         <div class="card-footer">MRP: Rs. 200
+                             <a href="add" class="btn btn-warning">add to cart</a>
+                         </div>
+                       </div>
+                       
+                    </div>
+ 
+ 
+                    <div class="col-md-3 extra-div">
+                     <div class="card item-align-center">
+                         <div class="card-header"><img src="closeup toothpaste.jpg" ></div>
+                         <div class="card-body">closeup toothpaste<br>
+                             Quantity:&nbsp;<select>
+                                 <option>1</option>
+                                 <option>2</option>
+                                 <option>3</option>
+                             </select>
+                         </div>
+                         <div class="card-footer">MRP: Rs. 40
+                             <a href="add" class="btn btn-warning">add to cart</a>
+                         </div>
+                       </div>
+                       
+                    </div>
+ 
+                    <div class="col-md-3 extra-div">
+                     <div class="card item-align-center">
+                         <div class="card-header"><img src="dabur amla hair oil.jpg" ></div>
+                         <div class="card-body">dabur amla hair oil<br>
+                             Quantity:&nbsp;<select>
+                                 <option>1</option>
+                                 <option>2</option>
+                                 <option>3</option>
+                             </select>
+                         </div>
+                         <div class="card-footer">MRP: Rs. 140
+                             <a href="add" class="btn btn-warning">add to cart</a>
+                         </div>
+                       </div>
+                       
+                    </div>
+ 
+                    <div class="col-md-3 extra-div">
+                     <div class="card item-align-center">
+                         <div class="card-header"><img src="dabur sarson amla oil.jpg" ></div>
+                         <div class="card-body">dabur sarson amla oil<br>
+                             Quantity:&nbsp;<select>
+                                 <option>1</option>
+                                 <option>2</option>
+                                 <option>3</option>
+                             </select>
+                         </div>
+                         <div class="card-footer">MRP: Rs. 100
+                             <a href="add" class="btn btn-warning">add to cart</a>
+                         </div>
+                       </div>
+                       
+                    </div>
+ 
+                </div>
+             </section> 
+
+
+
+
+             <section class="extra-header p-5 text-center">
+                <div class="row">
+                    <div class="col-md-3 extra-div">
+                     <div class="card item-align-center">
+                         <div class="card-header"><img src="dettol liquid.jpg" ></div>
+                         <div class="card-body">dettol liquid<br>
+                             Quantity:&nbsp;<select>
+                                 <option>1</option>
+                                 <option>2</option>
+                                 <option>3</option>
+                             </select>
+                         </div>
+                         <div class="card-footer">MRP: Rs. 70
+                             <a href="add" class="btn btn-warning">add to cart</a>
+                         </div>
+                       </div>
+                       
+                    </div>
+ 
+ 
+                    <div class="col-md-3 extra-div">
+                     <div class="card item-align-center">
+                         <div class="card-header"><img src="dettol soap.jpg" ></div>
+                         <div class="card-body">dettol soap<br>
+                             Quantity:&nbsp;<select>
+                                 <option>1</option>
+                                 <option>2</option>
+                                 <option>3</option>
+                             </select>
+                         </div>
+                         <div class="card-footer">MRP: Rs. 100
+                             <a href="add" class="btn btn-warning">add to cart</a>
+                         </div>
+                       </div>
+                       
+                    </div>
+ 
+                    <div class="col-md-3 extra-div">
+                     <div class="card item-align-center">
+                         <div class="card-header"><img src="dewon seving creem.jpg" ></div>
+                         <div class="card-body">dewon seving creem<br>
+                             Quantity:&nbsp;<select>
+                                 <option>1</option>
+                                 <option>2</option>
+                                 <option>3</option>
+                             </select>
+                         </div>
+                         <div class="card-footer">MRP: Rs. 150
+                             <a href="add" class="btn btn-warning">add to cart</a>
+                         </div>
+                       </div>
+                       
+                    </div>
+ 
+                    <div class="col-md-3 extra-div">
+                     <div class="card item-align-center">
+                         <div class="card-header"><img src="dove cream beauty.jpg" ></div>
+                         <div class="card-body">dove cream beauty<br>
+                             Quantity:&nbsp;<select>
+                                 <option>1</option>
+                                 <option>2</option>
+                                 <option>3</option>
+                             </select>
+                         </div>
+                         <div class="card-footer">MRP: Rs. 100
+                             <a href="add" class="btn btn-warning">add to cart</a>
+                         </div>
+                       </div>
+                       
+                    </div>
+ 
+                </div>
+             </section> 
+
+
+
+
+
+
+             <section class="extra-header p-5 text-center">
+                <div class="row">
+                    <div class="col-md-3 extra-div">
+                     <div class="card item-align-center">
+                         <div class="card-header"><img src="dove shampoo.jpg" ></div>
+                         <div class="card-body">dove shampoo<br>
+                             Quantity:&nbsp;<select>
+                                 <option>1</option>
+                                 <option>2</option>
+                                 <option>3</option>
+                             </select>
+                         </div>
+                         <div class="card-footer">MRP: Rs. 80
+                             <a href="add" class="btn btn-warning">add to cart</a>
+                         </div>
+                       </div>
+                       
+                    </div>
+ 
+ 
+                    <div class="col-md-3 extra-div">
+                     <div class="card item-align-center">
+                         <div class="card-header"><img src="fair & lovely fairness cream.jpg" ></div>
+                         <div class="card-body">fair & lovely fairness cream<br>
+                             Quantity:&nbsp;<select>
+                                 <option>1</option>
+                                 <option>2</option>
+                                 <option>3</option>
+                             </select>
+                         </div>
+                         <div class="card-footer">MRP: Rs. 180
+                             <a href="add" class="btn btn-warning">add to cart</a>
+                         </div>
+                       </div>
+                       
+                    </div>
+ 
+                    <div class="col-md-3 extra-div">
+                     <div class="card item-align-center">
+                         <div class="card-header"><img src="gillete saving creem.jpg" ></div>
+                         <div class="card-body">gillete saving creem<br>
+                             Quantity:&nbsp;<select>
+                                 <option>1</option>
+                                 <option>2</option>
+                                 <option>3</option>
+                             </select>
+                         </div>
+                         <div class="card-footer">MRP: Rs. 100
+                             <a href="add" class="btn btn-warning">add to cart</a>
+                         </div>
+                       </div>
+                       
+                    </div>
+ 
+                    <div class="col-md-3 extra-div">
+                     <div class="card item-align-center">
+                         <div class="card-header"><img src="godrej no 1 soap.jpg" ></div>
+                         <div class="card-body">godrej no 1 soap<br>
+                             Quantity:&nbsp;<select>
+                                 <option>1</option>
+                                 <option>2</option>
+                                 <option>3</option>
+                             </select>
+                         </div>
+                         <div class="card-footer">MRP: Rs. 80
+                             <a href="add" class="btn btn-warning">add to cart</a>
+                         </div>
+                       </div>
+                       
+                    </div>
+ 
+                </div>
+             </section> 
+
+
+
+
+
+             <section class="extra-header p-5 text-center">
+                <div class="row">
+                    <div class="col-md-3 extra-div">
+                     <div class="card item-align-center">
+                         <div class="card-header"><img src="parachute coconut oil.jpg" ></div>
+                         <div class="card-body">parachute coconut oil<br>
+                             Quantity:&nbsp;<select>
+                                 <option>1</option>
+                                 <option>2</option>
+                                 <option>3</option>
+                             </select>
+                         </div>
+                         <div class="card-footer">MRP: Rs. 60
+                             <a href="add" class="btn btn-warning">add to cart</a>
+                         </div>
+                       </div>
+                       
+                    </div>
+ 
+ 
+                    <div class="col-md-3 extra-div">
+                     <div class="card item-align-center">
+                         <div class="card-header"><img src="navratna thanda oil.jpg" ></div>
+                         <div class="card-body">navratna thanda oil<br>
+                             Quantity:&nbsp;<select>
+                                 <option>1</option>
+                                 <option>2</option>
+                                 <option>3</option>
+                             </select>
+                         </div>
+                         <div class="card-footer">MRP: Rs. 200
+                             <a href="add" class="btn btn-warning">add to cart</a>
+                         </div>
+                       </div>
+                       
+                    </div>
+ 
+                    <div class="col-md-3 extra-div">
+                     <div class="card item-align-center">
+                         <div class="card-header"><img src="nescafe cofee jar sof.jpg" ></div>
+                         <div class="card-body">nescafe cofee jar sof<br>
+                             Quantity:&nbsp;<select>
+                                 <option>1</option>
+                                 <option>2</option>
+                                 <option>3</option>
+                             </select>
+                         </div>
+                         <div class="card-footer">MRP: Rs. 140
+                             <a href="add" class="btn btn-warning">add to cart</a>
+                         </div>
+                       </div>
+                       
+                    </div>
+ 
+                    <div class="col-md-3 extra-div">
+                     <div class="card item-align-center">
+                         <div class="card-header"><img src="pantene shampoo.jpg" ></div>
+                         <div class="card-body">pantene shampoo<br>
+                             Quantity:&nbsp;<select>
+                                 <option>1</option>
+                                 <option>2</option>
+                                 <option>3</option>
+                             </select>
+                         </div>
+                         <div class="card-footer">MRP: Rs. 80
+                             <a href="add" class="btn btn-warning">add to cart</a>
+                         </div>
+                       </div>
+                       
+                    </div>
+ 
+                </div>
+             </section> 
+
+
+            
+            </div> 
+    </body>
+</html>

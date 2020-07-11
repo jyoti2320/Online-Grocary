@@ -1,0 +1,83 @@
+<html>
+<head>
+
+<style>
+
+		body{
+			background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)) ,url("img5.jpg");
+			background-repeat:no-repeat;
+			background-size:cover;
+			background-position:fixed;
+			padding:0px;
+			margin:0px;
+		}
+		.a1{
+			width:100%;
+			height:5%;
+			background-color:orange;
+		}
+		.a2{
+			text-decoration:none;
+		}
+			
+		.contact{
+			padding:50px;
+			margin:50px;
+			border-radius:10px;
+			border:1px solid black;
+			color:black;
+			width:30%;
+			height:50%;
+			background-color:white;
+			position:absolute;
+			right:500px;
+			top:110px;
+			border:1px solid black; 
+			border-radius:10px;
+		}
+		font{
+			color:white; 
+			position:absolute;
+			right:650px;
+			top:110px;
+		}
+		
+
+
+</style>
+</head>
+<body>
+    <a href="home.html"><-Back to home</a>
+<center><font size="30px">Contact Form</font></center>
+<form action="email.php" method="post">
+<div class="container">
+  <table class="contact">
+<tr>  
+    <td><label>Name:</label></td>
+    <td><input type="text" id="fname" name="firstname" placeholder="first name"></td>
+	
+</tr>
+<tr>
+    <td><label>Email:</label></td>
+    <td><input type="text" id="lname" name="lastname" placeholder="last name"></td>
+</tr>
+<tr>
+    <td><label>Subject:</label></td>
+    <td><input type="text" id="city" name="city" placeholder="city"></td>
+</tr>
+
+<tr>
+    <td><label>Message:</label></td>
+    <td><textarea id="message" name="message" placeholder="Write message"></textarea></td>
+</tr>
+<tr>
+    <td><input type="submit" value="Submit"></td>
+</tr>
+ </table>
+ 
+</div>
+
+</body>
+</html>
+
+    
